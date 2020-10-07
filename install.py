@@ -6,7 +6,7 @@ def loader():
 class JSON_Installer(ExtensionInstaller):
     def __init__(self):
         super(JSON_Installer, self).__init__(
-            version="1.0",
+            version="1.1",
             name='JSON',
             description='Add JSON output',
             author="Thomas Kent",
