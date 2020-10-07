@@ -20,7 +20,7 @@ class JSON_Installer(ExtensionInstaller):
                 }
             },
             files=[('skins/JSON', [
-                'skins/JSON/current_minimal.json.tmpl'
+                'skins/JSON/current_minimal.json.tmpl',
                 'skins/JSON/skin.conf',
                 'skins/JSON/weewx.json.tmpl'
             ])]
