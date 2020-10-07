@@ -1,4 +1,8 @@
 Upcoming
+--------
+
+
+1.1
 ---
 
 *   Smaller JSON file to be generated, `current_minimal.json`. No computed or archived values.
