@@ -1,0 +1,40 @@
+{
+    "station":
+    {
+        "location": "$station.location",
+        "latitude": $station.stn_info.latitude_f,
+        "longitude": $station.stn_info.longitude_f,
+        "altitude (meters)": $station.altitude.meter.raw,
+        "link": "$station.station_url"
+    },
+    "generation":
+    {
+        "time": "$current.dateTime.format("%a, %d %b %Y %H:%M:%S %Z")",
+        "generator": "weewx $station.version"
+    },
+    "current":
+    {
+        #if $current.outTemp.has_data
+        "temperature": {"value": $current.outTemp.raw, "units": "$current.outTemp.format(" ").lstrip()"},
+        #end if
+        #if $current.outHumidity.has_data
+        "humidity": {"value": $current.outHumidity.raw, "units": "$current.outHumidity.format(" ").lstrip()"},
+        #end if
+        #if $current.barometer.has_data
+        "barometer": {"value": $current.barometer.raw, "units": "$current.barometer.format(" ").lstrip()"},
+        #end if
+        #if $current.windSpeed.has_data
+        "wind speed": {"value": $current.windSpeed.raw, "units": "$current.windSpeed.format(" ").lstrip()"},
+        #end if
+        #if $current.windGust.has_data
+        "wind gust": {"value": $current.windGust.raw, "units": "$current.windGust.format(" ").lstrip()"},
+        #end if
+        #if $current.windDir.has_data
+        "wind direction": {"value": $current.windDir.raw, "units": "$current.windDir.format(" ").lstrip()"},
+        #end if
+        #if $current.rainRate.has_data
+        "rain rate": {"value": $current.rainRate.raw, "units": "$current.rainRate.format(" ").lstrip()"},
+        #end if
+        "void_end": null
+    }
+}
