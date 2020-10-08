@@ -6,7 +6,7 @@ def loader():
 class JSON_Installer(ExtensionInstaller):
     def __init__(self):
         super(JSON_Installer, self).__init__(
-            version="1.1",
+            version="$version",
             name='JSON',
             description='Add JSON output',
             author="Thomas Kent",
@@ -19,9 +19,5 @@ class JSON_Installer(ExtensionInstaller):
                     }
                 }
             },
-            files=[('skins/JSON', [
-                'skins/JSON/current_minimal.json.tmpl',
-                'skins/JSON/skin.conf',
-                'skins/JSON/weewx.json.tmpl'
-            ])]
+            files=[$file_paths]
         )
