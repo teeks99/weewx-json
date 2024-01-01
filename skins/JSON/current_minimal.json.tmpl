@@ -9,7 +9,11 @@
     },
     "generation":
     {
+        #if $Extras.timestamp_fmt is "human"
         "time": "$current.dateTime.format("%a, %d %b %Y %H:%M:%S %Z")",
+        #else
+        "time": "$current.dateTime.format("%Y-%m-%dT%H:%M:%S%z")",
+        #end if
         "generator": "weewx $station.version"
     },
     "current":
