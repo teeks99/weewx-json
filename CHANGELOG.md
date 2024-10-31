@@ -1,6 +1,7 @@
 Upcoming
 --------
 
+*   Fixed a warning due to the use of `is` comparison with a literal instead of `==`
 
 1.2
 ---
