@@ -7,7 +7,7 @@ jobs:
 
     steps:
     - name: checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: get-hash
       id: hash
       run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"     
